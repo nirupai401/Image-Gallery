@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="trail.css">
+    <link rel ="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+<body>
+    <header class="page-header">
+        <h1> Explore Places</h1>
+        <p>
+            Hover over cards to discover details of each place- a simple and elegant interactive experience
+        </p>
+    </header>
+    <!-- Accordion Cards -->
+
+  <div class="cards">
+
+
+
+    <!-- Card 1 -->
+
+    <div class="card">
+
+      <a href="https://picsum.photos/id/1022/800/600" target="_blank" rel="noopener noreferrer">
+
+        <img src="https://picsum.photos/id/1022/800/600" alt="Aurora Borealis over the forest" loading="lazy">
+
+      </a>
+
+      <span class="card-number">02</span>
+
+      <div class="card-title">Forest Lights</div>
+
+      <p class="card-desc">A live display of the Northern Lights illuminates the forest sky with enchanting green colors
+      </p>
+
+    </div>
+    <!-- Card 2 -->
+
+    <div class="card">
+
+      <a href="https://picsum.photos/id/1015/800/600" target="_blank" rel="noopener noreferrer">
+
+        <img src="https://picsum.photos/id/1015/800/600" alt="Mountain view with a river flowing between the rocks"
+          loading="lazy">
+
+      </a>
+
+      <span class="card-number">01</span>
+
+      <div class="card-title">Coast Rocks</div>
+
+      <p class="card-desc">A rocky beach with clear blue water and a vast sky stretching to the horizon</p>
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="card">
+      <a href="https://picsum.photos/id/1035/800/600" target="_blank" rel="noopener noreferrer">
+
+        <img src="https://picsum.photos/id/1035/800/600" alt="Person walking on a nature trail" loading="lazy">
+
+      </a>
+
+      <span class="card-number">03</span>
+
+      <div class="card-title">Nature Walk</div>
+
+      <p class="card-desc">Discover the beauty of nature along peaceful trails surrounded by trees and greenery</p>
+
+      </div>
+
+<!-- Card 4 -->
+
+<div class="card">
+
+<a href="https://picsum.photos/id/1045/800/600" target="_blank" rel="noopener noreferrer">
+
+<img src="https://picsum.photos/id/1045/800/600" alt="Peaceful mountain view with clouds" loading="lazy">
+
+</a>
+
+<span class="card-number">04</span>
+
+<div class="card-title">Mountain Peak</div>
+
+<p class="card-desc">Clouds floating gently above a captivating, serene mountain view</p>
+
+</div>
+
+<!-- Card 5 -->
+
+<div class="card">
+
+<a href="https://picsum.photos/id/1055/800/600" target="_blank" rel="noopener noreferrer">
+
+<img src="https://picsum.photos/id/1055/800/600" alt="Golden Sunset Over the Horizon" loading="lazy">
+</a>
+
+<span class="card-number">05</span>
+
+<div class="card-title">Golden Sunset</div>
+
+<p class="card-desc">Watch the golden hour as the sun sets behind the horizon in warm colors</p>
+
+</div>
+
+</div>
+
+<!-- Hint -->
+
+<div class="hint">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M15 15l-2 5L9 9l11 4-5 2z"/>
+
+<path d="M15 15l5 5"/>
+
+</svg>
+Hover over any card to enlarge it
+
+</div>
+
+   <script >
+
+document.querySelectorAll('.card img').forEach(function(img){
+    if(img.complete && img.naturalWidth >0){
+        img.classList.add('loaded');
+    }
+    else{
+        img.addEventListener('load', function(){
+            this.classList.add('loaded')
+        })
+    }
+})
+   </script>
+
+</body>
+</html>
+
